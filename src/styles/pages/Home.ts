@@ -29,30 +29,29 @@ export const Description = styled.div`
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
-  width: 59vw;
-  height: 4vh;
+  padding: 0 6px;
   margin-top: 70px;
   font-size: 20px;
   background-color: #50fa7b;
   border-radius: 8px;
-  color: #383a59;
+  color: #282a36;
   @media (max-width: 750px) {
     text-align: center;
+    margin: 70px 10px;
   }
 `
 export const SocialNetworks = styled.div`
   display: flex;
   height: 100px;
   width: 100vw;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 30px;
 
   a {
     text-decoration: none;
     color: #fff;
-    margin-right: 50px;
-    justify-content: center;
     align-items: center;
+    margin: 0 50px;
   }
 `

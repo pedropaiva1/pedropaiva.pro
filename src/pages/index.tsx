@@ -31,7 +31,6 @@ const Home: NextPage = () => {
       </Description>
       <SocialNetworks>
         <a
-          className="icon"
           target="__blank"
           href="https://www.linkedin.com/in/pedro-martins-b36267205/"
         >

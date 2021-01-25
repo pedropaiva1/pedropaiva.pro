@@ -29,8 +29,14 @@ export const Container = styled.div`
   }
 
   li {
-    font-size: 35px;
+    font-size: 25px;
     margin-left: 25px;
+    transition: ease 0.2s;
+  }
+
+  li:hover {
+    cursor: pointer;
+    color: #7c49a8;
   }
 
   > svg {

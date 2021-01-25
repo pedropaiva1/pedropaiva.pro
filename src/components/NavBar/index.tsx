@@ -19,6 +19,7 @@ const NavBar: React.FC = () => {
         <ul>
           <li>Contato</li>
           <li>Portfolio</li>
+          <li>Blog</li>
         </ul>
       </MenuDrawer>
     </Background>
