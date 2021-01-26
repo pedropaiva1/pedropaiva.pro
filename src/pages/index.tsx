@@ -7,7 +7,12 @@ import Image from 'next/image'
 
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 
-import { Container, SocialNetworks, Description } from '../styles/pages/Home'
+import {
+  Container,
+  SocialNetworks,
+  Description,
+  Technologies
+} from '../styles/pages/Home'
 
 const Home: NextPage = () => {
   return (
@@ -24,7 +29,6 @@ const Home: NextPage = () => {
         quality={100}
         className="photo"
       />
-      <p>Fullstack Developer</p>
       <Description>
         Desenvolvedor de aplicações web com foco em performance e experiência de
         usuário.
@@ -43,6 +47,7 @@ const Home: NextPage = () => {
           <FaGithub size={40} />
         </a>
       </SocialNetworks>
+      <Technologies></Technologies>
     </Container>
   )
 }

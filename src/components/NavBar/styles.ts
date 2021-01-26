@@ -26,6 +26,12 @@ export const Container = styled.div`
 
   p {
     font-size: 35px;
+    transition: ease 0.2s;
+  }
+
+  p:hover {
+    cursor: pointer;
+    color: #7c49a8;
   }
 
   li {

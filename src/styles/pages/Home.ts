@@ -30,7 +30,7 @@ export const Description = styled.div`
   -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   padding: 0 6px;
-  margin-top: 70px;
+  margin-top: 95px;
   font-size: 20px;
   background-color: #50fa7b;
   border-radius: 8px;
@@ -55,3 +55,4 @@ export const SocialNetworks = styled.div`
     margin: 0 50px;
   }
 `
+export const Technologies = styled.div``
