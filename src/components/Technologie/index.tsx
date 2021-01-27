@@ -1,10 +1,15 @@
 import React from 'react'
 import { NextPage } from 'next'
 
-import { Container } from '../../styles/pages/Home'
+import { Container } from './styles'
 
 const Technologie: NextPage = () => {
-  return <Container></Container>
+  return (
+    <Container>
+      <h1>NomeProjeto</h1>
+      <p>Descrição do prejeto</p>
+    </Container>
+  )
 }
 
 export default Technologie

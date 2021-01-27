@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Background = styled.div`
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: #282a36;
-  width: 100vw;
+  width: 100%;
   -webkit-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
@@ -57,13 +57,5 @@ export const Container = styled.div`
     ul {
       display: none;
     }
-  }
-`
-export const MenuDrawer = styled.div`
-  position: absolute;
-  display: none;
-
-  @media (max-width: 750px) {
-    display: none;
   }
 `

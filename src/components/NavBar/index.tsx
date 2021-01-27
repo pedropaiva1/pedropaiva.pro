@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 
-import { Background, Container, MenuDrawer } from './styles'
+import { Background, Container } from './styles'
 
 const NavBar: React.FC = () => {
   return (
@@ -25,13 +25,6 @@ const NavBar: React.FC = () => {
           </Link>
         </ul>
       </Container>
-      <MenuDrawer>
-        <ul>
-          <li>Contato</li>
-          <li>Portfolio</li>
-          <li>Blog</li>
-        </ul>
-      </MenuDrawer>
     </Background>
   )
 }

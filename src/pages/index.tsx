@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 
 import Navbar from '../components/NavBar'
+import Technologie from '../components/Technologie'
 import Image from 'next/image'
 
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
@@ -47,7 +48,10 @@ const Home: NextPage = () => {
           <FaGithub size={40} />
         </a>
       </SocialNetworks>
-      <Technologies></Technologies>
+      <Technologies>
+        <h1>Tecnologias que já utilizei</h1>
+        <Technologie />
+      </Technologies>
     </Container>
   )
 }
