@@ -14,14 +14,14 @@ const NavBar: React.FC = () => {
 
         <HiMenu size={28} color="#fff" />
         <ul>
-          <Link href="/contact">
-            <li>Contato</li>
-          </Link>
           <Link href="/portfolio">
             <li>Portfolio</li>
           </Link>
           <Link href="/blog">
             <li>Blog</li>
+          </Link>
+          <Link href="/contact">
+            <li>Contato</li>
           </Link>
         </ul>
       </Container>

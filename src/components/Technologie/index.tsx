@@ -1,13 +1,17 @@
 import React from 'react'
-import { NextPage } from 'next'
 
 import { Container } from './styles'
 
-const Technologie: NextPage = () => {
+interface TechnolieProps {
+  name: string
+  description: string
+}
+
+const Technologie: React.FC<TechnolieProps> = props => {
   return (
     <Container>
-      <h1>NomeProjeto</h1>
-      <p>Descrição do prejeto</p>
+      <h1>{props.name}</h1>
+      <p>{props.description}</p>
     </Container>
   )
 }

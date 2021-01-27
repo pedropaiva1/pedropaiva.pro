@@ -52,14 +52,3 @@ export const SocialNetworks = styled.div`
     margin: 0 50px;
   }
 `
-export const Technologies = styled.div`
-  margin: 30px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  h1 {
-    padding-bottom: 10px;
-  }
-`
