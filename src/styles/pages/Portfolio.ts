@@ -13,8 +13,9 @@ export const Technologies = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px 50px;
   h1 {
     padding-bottom: 10px;
   }

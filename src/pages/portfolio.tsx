@@ -8,20 +8,7 @@ import Technologie from '../components/Technologie'
 import { useFetch } from '../hooks/useFetch'
 
 const Portfolio: NextPage = () => {
-  const { data } = useFetch('/repos/pedroviskov1234/frontend-nlw2')
-
-  if (!data) {
-    return (
-      <Container>
-        <Head>
-          <title>portfolio</title>
-        </Head>
-        <NavBar />
-        <p>Carregando...</p>
-      </Container>
-    )
-  }
-
+  const { data } = useFetch('/users/pedroviskov1234/repos')
   return (
     <Container>
       <Head>
@@ -29,7 +16,18 @@ const Portfolio: NextPage = () => {
       </Head>
       <NavBar />
       <Technologies>
-        <Technologie name={data.name} description={data.description} />
+        {!data && <p>carregando...</p>}
+        {data &&
+          data.map(repos => {
+            return (
+              <Technologie
+                key={repos.id}
+                name={repos.name}
+                description={repos.description}
+                url={repos.html_url}
+              />
+            )
+          })}
       </Technologies>
     </Container>
   )
