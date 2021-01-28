@@ -16,7 +16,6 @@ const Portfolio: NextPage = () => {
       </Head>
       <NavBar />
       <Technologies>
-        {!data && <p>carregando...</p>}
         {data &&
           data.map(repos => {
             return (

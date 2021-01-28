@@ -10,9 +10,14 @@ interface TechnolieProps {
 
 const Technologie: React.FC<TechnolieProps> = props => {
   return (
-    <Container href={props.url} target="__blank">
-      <h1>{props.name}</h1>
-      <p>{props.description}</p>
+    <Container>
+      <div className="box">
+        <h1>{props.name}</h1>
+        <p>{props.description}</p>
+        <div>
+          <a href={props.url}>Documentation →</a>
+        </div>
+      </div>
     </Container>
   )
 }
