@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import { NextPage } from 'next'
 
-import Navbar from '../components/NavBar'
 import Image from 'next/image'
 
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'

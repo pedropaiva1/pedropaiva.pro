@@ -1,9 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { NextPage } from 'next'
-import NavBar from '../components/NavBar'
-
-import Link from 'next/link'
 
 import { Container } from '../styles/pages/Home'
 
