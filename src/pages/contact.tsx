@@ -12,7 +12,6 @@ const Contact: NextPage = () => {
       <Head>
         <title>Contato</title>
       </Head>
-      <NavBar />
       <p>Contato</p>
     </Container>
   )

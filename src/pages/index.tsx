@@ -15,7 +15,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Homepage</title>
       </Head>
-      <Navbar />
       <Image
         src="/me.jpg"
         alt="Pedro Henrique Martins Paiva"

@@ -31,7 +31,7 @@ export const Container = styled.div`
 
   p:hover {
     cursor: pointer;
-    color: #7c49a8;
+    color: #bd93f9;
   }
 
   li {
@@ -43,8 +43,8 @@ export const Container = styled.div`
 
   li:hover {
     cursor: pointer;
-    color: #7c49a8;
-    border-color: #7c49a8;
+    color: #bd93f9;
+    border-color: #bd93f9;
   }
 
   > svg {

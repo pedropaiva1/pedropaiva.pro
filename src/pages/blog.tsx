@@ -13,7 +13,6 @@ const Blog: NextPage = () => {
       <Head>
         <title>Blog</title>
       </Head>
-      <NavBar />
       <p>Blog</p>
     </Container>
   )

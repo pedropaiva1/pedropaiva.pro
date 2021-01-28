@@ -14,7 +14,6 @@ const Portfolio: NextPage = () => {
       <Head>
         <title>portfolio</title>
       </Head>
-      <NavBar />
       <Technologies>
         {data &&
           data.map(repos => {
