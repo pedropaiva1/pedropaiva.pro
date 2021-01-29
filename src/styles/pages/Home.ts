@@ -7,6 +7,8 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  animation: loadAnimation;
+  animation-duration: 500ms;
 
   .photo {
     -webkit-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);

@@ -7,6 +7,8 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  animation: loadAnimation;
+  animation-duration: 500ms;
 `
 export const Technologies = styled.div`
   margin: 30px 0;

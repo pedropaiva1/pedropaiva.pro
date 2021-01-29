@@ -33,4 +33,13 @@ export default createGlobalStyle`
     border: 0;
   }
 
+  @keyframes loadAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity:1
+    }
+  }
+
 `

@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Homepage</title>
+        <title>Home | Pedro Paiva</title>
       </Head>
       <Image
         src="/me.jpg"

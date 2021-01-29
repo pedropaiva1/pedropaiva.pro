@@ -11,7 +11,7 @@ const Portfolio: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>portfolio</title>
+        <title>Portfolio</title>
       </Head>
       <Technologies>
         {data &&
