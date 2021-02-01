@@ -19,8 +19,6 @@ const Home: NextPage = () => {
         alt="Pedro Henrique Martins Paiva"
         height={250}
         width={250}
-        quality={100}
-        className="photo"
       />
       <Description>
         Desenvolvedor de aplicações web com foco em performance e experiência de

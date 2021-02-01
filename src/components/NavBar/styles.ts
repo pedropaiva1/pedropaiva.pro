@@ -7,6 +7,80 @@ export const Background = styled.div`
   -webkit-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
+  display: block;
+
+  .nav-menu {
+    background-color: #282a36;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 40px;
+    right: -100%;
+    transition: all 0.4s ease;
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    z-index: 1000;
+  }
+
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+    border-bottom: 1px solid #50fa7b;
+    cursor: pointer;
+  }
+
+  .nav-text p {
+    text-decoration: none;
+    color: #e1e1e6;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .nav-menu-items {
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    background-color: #282a36;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  a > p {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 750px) {
+    div:first-child {
+      display: flex;
+      margin: 0;
+      width: 100%;
+    }
+
+    div > p {
+      margin-left: 20px;
+    }
+
+    div > svg {
+      margin-right: 20px;
+    }
+  }
 `
 
 export const Container = styled.div`
@@ -54,6 +128,7 @@ export const Container = styled.div`
   @media (max-width: 750px) {
     > svg {
       display: block;
+      cursor: pointer;
     }
 
     ul {

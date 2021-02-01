@@ -15,7 +15,7 @@ const Technologie: React.FC<TechnolieProps> = props => {
         <h1>{props.name}</h1>
         <p>{props.description}</p>
         <div>
-          <a href={props.url}>Documentation →</a>
+          <a href={props.url}>Documentação →</a>
         </div>
       </div>
     </Container>

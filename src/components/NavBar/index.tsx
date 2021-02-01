@@ -1,30 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
+import { VscClose } from 'react-icons/vsc'
+
+import { SidebarData } from './SidebarData'
 
 import { Background, Container } from './styles'
 
 const NavBar: React.FC = () => {
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSidebar = () => setSidebar(!sidebar)
+
   return (
     <Background>
       <Container>
         <Link href="/">
-          <p>Pedro Paiva</p>
+          <p onClick={sidebar && showSidebar}>Pedro Paiva</p>
         </Link>
-
-        <HiMenu size={28} color="#fff" />
+        {sidebar && (
+          <VscClose size={28} color="#e1e1e6" onClick={showSidebar} />
+        )}
+        {!sidebar && <HiMenu size={28} color="#e1e1e6" onClick={showSidebar} />}
         <ul>
           <Link href="/portfolio">
             <li>Portfolio</li>
-          </Link>
-          <Link href="/blog">
-            <li>Blog</li>
           </Link>
           <Link href="/contact">
             <li>Contato</li>
           </Link>
         </ul>
       </Container>
+      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <ul className="nav-menu-items">
+          {SidebarData.map((item, index) => {
+            return (
+              <li key={index} className={item.cName} onClick={showSidebar}>
+                <Link href={item.path}>
+                  <p>{item.title}</p>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
     </Background>
   )
 }

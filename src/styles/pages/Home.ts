@@ -10,7 +10,7 @@ export const Container = styled.div`
   animation: loadAnimation;
   animation-duration: 500ms;
 
-  .photo {
+  img {
     -webkit-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
@@ -35,7 +35,7 @@ export const Description = styled.p`
   background-color: #50fa7b;
   border-radius: 8px;
   color: #282a36;
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
     text-align: center;
     margin: 70px 10px;
   }
@@ -49,8 +49,13 @@ export const SocialNetworks = styled.div`
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #e1e1e6;
     align-items: center;
     margin: 0 50px;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 0;
+    width: 90%;
   }
 `

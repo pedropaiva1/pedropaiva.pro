@@ -14,6 +14,7 @@ export const Container = styled.main`
 
   img {
     border-radius: 50%;
+    border: dashed 2px #50fa7b;
   }
 
   section {
@@ -22,6 +23,59 @@ export const Container = styled.main`
     align-items: center;
     justify-content: center;
     flex-direction: row;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  form > h1 {
+    margin-bottom: 10px;
+  }
+
+  form > input {
+    margin-top: 5px;
+    width: 700px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 400;
+    border: 1px solid transparent;
+    transition: all 0.2s linear;
+  }
+
+  input:focus {
+    border: 1px solid #50fa7b;
+  }
+
+  form > input,
+  textarea {
+    margin-top: 5px;
+    border: 1px solid #383a59;
+    background-color: #282a36;
+    color: #e1e1e6;
+  }
+
+  textarea {
+    border-radius: 6px;
+    width: 700px;
+    padding: 10px 15px;
+    font-weight: 400;
+    font-family: 'Roboto' sans-serif;
+    overflow-y: hidden;
+    resize: none;
+    height: 100px;
+    border: 1px solid transparent;
+    transition: all 0.2s linear;
+  }
+
+  textarea:focus {
+    border: 1px solid #50fa7b;
   }
 
   p {
@@ -33,6 +87,58 @@ export const Container = styled.main`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: #282a36;
+    color: #e1e1e6;
+    border: 1px solid transparent;
+    transition: all 0.2s linear;
+  }
+
+  button:hover {
+    border: 1px solid #50fa7b;
+  }
+
+  @media (max-width: 750px) {
+    textarea {
+      width: 425px;
+    }
+
+    #name,
+    #subject,
+    #email {
+      width: 425px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    img {
+      display: none;
+    }
+
+    aside {
+      margin-left: 0;
+    }
+
+    section > div {
+      display: none;
+    }
+
+    textarea {
+      width: 300px;
+    }
+
+    #name,
+    #subject,
+    #email {
+      width: 300px;
+    }
   }
 `
 
@@ -49,10 +155,16 @@ export const SocialNetworks = styled.aside`
     margin-top: 15px;
     text-decoration: none;
     color: #e1e1e6;
+    justify-content: start;
+    width: 100%;
   }
 
   a > svg {
     margin-right: 10px;
     color: #e1e1e6;
+  }
+
+  a > p {
+    font-size: 17px;
   }
 `

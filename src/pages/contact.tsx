@@ -6,6 +6,8 @@ import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 
 import { Container, SocialNetworks } from '../styles/pages/Contact'
 
+import { HiMail } from 'react-icons/hi'
+
 const Contact: NextPage = () => {
   return (
     <Container>
@@ -22,21 +24,29 @@ const Contact: NextPage = () => {
         />
         <SocialNetworks>
           <a href="">
-            <FaGithub size={35} /> Pedro Paiva
+            <HiMail size={30} /> <p>pedro.paivahmp@gmail.com</p>
           </a>
-          <a href="">
-            <FaLinkedin size={35} /> Pedro Paiva
+          <a href="https://github.com/pedroviskov1234" target="__blank">
+            <FaGithub size={30} /> <p>pedroviskov1234</p>
           </a>
-          <a href="">
-            <FaFacebook size={35} /> Pedro Paiva
+          <a
+            href="https://www.linkedin.com/in/pedro-martins-b36267205/"
+            target="__blank"
+          >
+            <FaLinkedin size={30} /> <p>Pedro Paiva</p>
+          </a>
+          <a href="https://www.facebook.com/pedroxotaf/" target="__blank">
+            <FaFacebook size={30} /> <p>Pedro Henrique</p>
           </a>
         </SocialNetworks>
       </section>
       <form>
-        <input></input>
-        <input></input>
-        <input></input>
-        <textarea></textarea>
+        <h1>Entre em contato</h1>
+        <input placeholder="Nome" id="name"></input>
+        <input placeholder="Email" id="email"></input>
+        <input placeholder="Assunto" id="subject"></input>
+        <textarea placeholder="Descrição" id="description"></textarea>
+        <button type="submit">Enviar</button>
       </form>
     </Container>
   )

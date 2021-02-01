@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 300px;
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 30px;
   border-radius: 10px;
   text-align: start;
   word-wrap: break-word;
@@ -14,12 +14,13 @@ export const Container = styled.div`
     margin-top: 5px;
     font-size: 1.25rem;
     text-align: start;
+    font-weight: 700;
   }
 
   p {
     font-size: 15px;
     margin-bottom: 8px;
-    font-weight: 100;
+    font-weight: 400;
   }
 
   .box {
@@ -33,11 +34,11 @@ export const Container = styled.div`
     border-color: #282a36;
     border-radius: 7px;
     transition: all 0.2s linear;
+    background-color: #282a36;
   }
 
   .box:hover {
     border: solid 1px #50fa7b;
-    cursor: pointer;
     -webkit-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
