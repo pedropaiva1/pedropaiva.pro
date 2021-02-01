@@ -38,5 +38,13 @@ export const Curriculum = styled.div`
 
   p {
     font-weight: 400;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 700px) {
+    p {
+      text-align: start;
+      margin: 10px 10px;
+    }
   }
 `

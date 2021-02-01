@@ -37,7 +37,10 @@ export const Description = styled.p`
   color: #282a36;
   @media (max-width: 800px) {
     text-align: center;
-    margin: 70px 10px;
+    margin-top: 90px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 25px;
   }
 `
 export const SocialNetworks = styled.div`
