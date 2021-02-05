@@ -9,6 +9,8 @@ export const Container = styled.div`
   border-radius: 10px;
   text-align: start;
   word-wrap: break-word;
+  animation: loadAnimation;
+  animation-duration: 500ms;
 
   h1 {
     margin-top: 5px;

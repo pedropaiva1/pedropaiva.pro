@@ -7,7 +7,9 @@ import Technologie from '../components/Technologie'
 import { useFetch } from '../hooks/useFetch'
 
 const Portfolio: NextPage = () => {
-  const { data } = useFetch('/users/pedroviskov1234/repos')
+  const { data, error } = useFetch(
+    'https://api.github.com/users/pedroviskov1234/repos'
+  )
   return (
     <Container>
       <Head>
@@ -26,7 +28,8 @@ const Portfolio: NextPage = () => {
         <h1>Projetos no GitHub</h1>
       </Curriculum>
       <Technologies>
-        {data &&
+        {!error &&
+          data &&
           data.map(repos => {
             return (
               <Technologie

@@ -10,7 +10,7 @@ export const Container = styled.main`
   text-align: center;
   animation: loadAnimation;
   animation-duration: 500ms;
-  margin-top: 40px;
+  margin-top: 30px;
 
   img {
     border-radius: 50%;

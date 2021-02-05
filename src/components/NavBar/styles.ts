@@ -99,13 +99,16 @@ export const Container = styled.div`
   }
 
   p {
-    font-size: 35px;
-    transition: ease 0.2s;
+    font-size: 30px;
+    transition: all 0.2s linear;
+    border-bottom: 2px solid transparent;
+    margin: 4px 0;
   }
 
   p:hover {
     cursor: pointer;
-    color: #bd93f9;
+    color: #8be9fd;
+    border-color: #8be9fd;
   }
 
   li {
@@ -117,8 +120,8 @@ export const Container = styled.div`
 
   li:hover {
     cursor: pointer;
-    color: #bd93f9;
-    border-color: #bd93f9;
+    color: #8be9fd;
+    border-color: #8be9fd;
   }
 
   > svg {

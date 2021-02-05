@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+
 import { HiMenu } from 'react-icons/hi'
 import { VscClose } from 'react-icons/vsc'
 
@@ -8,7 +9,7 @@ import { SidebarData } from './SidebarData'
 import { Background, Container } from './styles'
 
 const NavBar: React.FC = () => {
-  const [sidebar, setSidebar] = useState(false)
+  const [sidebar, setSidebar] = useState<boolean>(false)
 
   const showSidebar = () => setSidebar(!sidebar)
 

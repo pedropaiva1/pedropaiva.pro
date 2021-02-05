@@ -28,7 +28,7 @@ export const Curriculum = styled.div`
   flex-direction: column;
   text-align: center;
   h1:first-child {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
 

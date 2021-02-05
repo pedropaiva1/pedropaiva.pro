@@ -3,12 +3,33 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
+import { HiMail } from 'react-icons/hi'
+
+import emailjs from 'emailjs-com'
 
 import { Container, SocialNetworks } from '../styles/pages/Contact'
 
-import { HiMail } from 'react-icons/hi'
-
 const Contact: NextPage = () => {
+  function sendEmail(e) {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        'service_rfguz0s',
+        'template_t22alea',
+        e.target,
+        'user_wXfvqOZyvyneNGDHf4gqU'
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
   return (
     <Container>
       <Head>
@@ -40,12 +61,16 @@ const Contact: NextPage = () => {
           </a>
         </SocialNetworks>
       </section>
-      <form>
+      <form onSubmit={sendEmail}>
         <h1>Entre em contato</h1>
-        <input placeholder="Nome" id="name"></input>
-        <input placeholder="Email" id="email"></input>
-        <input placeholder="Assunto" id="subject"></input>
-        <textarea placeholder="Descrição" id="description"></textarea>
+        <input placeholder="Nome" id="name" name="name"></input>
+        <input placeholder="Email" id="email" name="email"></input>
+        <input placeholder="Assunto" id="subject" name="subject"></input>
+        <textarea
+          placeholder="Descrição"
+          id="description"
+          name="message"
+        ></textarea>
         <button type="submit">Enviar</button>
       </form>
     </Container>
