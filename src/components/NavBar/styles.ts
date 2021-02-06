@@ -101,7 +101,7 @@ export const Container = styled.div`
     font-size: 30px;
     transition: all 0.2s linear;
     border-bottom: 2px solid transparent;
-    margin: 4px 0;
+    margin-bottom: 2px;
   }
 
   p:hover {

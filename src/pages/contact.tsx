@@ -11,8 +11,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Container, SocialNetworks } from '../styles/pages/Contact'
 
 const Contact: NextPage = () => {
-  const onHandleSubmit = useCallback(event => {
-    event.preventDefault()
+  const onHandleSubmit = useCallback(e => {
+    e.preventDefault()
     const inputs = document.getElementsByTagName('input')
     const description = document.getElementsByTagName('textarea')[0].value
 
@@ -47,7 +47,7 @@ const Contact: NextPage = () => {
     }
 
     toast.dark('📤 Enviando e-mail...', {
-      position: 'top-center',
+      position: 'top-right',
       autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -65,14 +65,14 @@ const Contact: NextPage = () => {
       .sendForm(
         'service_rfguz0s',
         'template_t22alea',
-        event.target,
+        e.target,
         'user_wXfvqOZyvyneNGDHf4gqU '
       )
       .then(
         result => {
           console.log(result.text)
           toast.dark('🚀 E-mail enviado com sucesso!', {
-            position: 'top-center',
+            position: 'top-right',
             autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -89,7 +89,7 @@ const Contact: NextPage = () => {
         error => {
           console.log(error.text)
           toast.dark('😓 Erro ao enviar o e-mail', {
-            position: 'top-center',
+            position: 'top-right',
             autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -104,7 +104,7 @@ const Contact: NextPage = () => {
           })
         }
       )
-    event.target.reset()
+    e.target.reset()
   }, [])
 
   return (
