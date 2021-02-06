@@ -122,14 +122,14 @@ const Contact: NextPage = () => {
             quality={100}
           />
           <SocialNetworks>
-            <a href="">
+            <a>
               <HiMail size={30} /> <p>pedro.paivahmp@gmail.com</p>
             </a>
             <a href="https://github.com/pedroviskov1234" target="__blank">
               <FaGithub size={30} /> <p>pedroviskov1234</p>
             </a>
             <a
-              href="https://www.linkedin.com/in/pedro-martins-b36267205/"
+              href="https://www.linkedin.com/in/pedro-paiva-b36267205/"
               target="__blank"
             >
               <FaLinkedin size={30} /> <p>Pedro Paiva</p>
