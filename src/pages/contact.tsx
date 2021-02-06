@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import { NextPage } from 'next'
 import Image from 'next/image'
@@ -11,8 +11,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Container, SocialNetworks } from '../styles/pages/Contact'
 
 const Contact: NextPage = () => {
-  const onHandleSubmit = useCallback(e => {
+  function sendEmail(e) {
     e.preventDefault()
+
     const inputs = document.getElementsByTagName('input')
     const description = document.getElementsByTagName('textarea')[0].value
 
@@ -60,13 +61,12 @@ const Contact: NextPage = () => {
         color: '#e1e1e6'
       }
     })
-
     emailjs
       .sendForm(
         'service_rfguz0s',
         'template_t22alea',
         e.target,
-        'user_wXfvqOZyvyneNGDHf4gqU '
+        'user_wXfvqOZyvyneNGDHf4gqU'
       )
       .then(
         result => {
@@ -105,7 +105,7 @@ const Contact: NextPage = () => {
         }
       )
     e.target.reset()
-  }, [])
+  }
 
   return (
     <>
@@ -139,7 +139,7 @@ const Contact: NextPage = () => {
             </a>
           </SocialNetworks>
         </section>
-        <form onSubmit={onHandleSubmit}>
+        <form onSubmit={sendEmail}>
           <h1>Entre em contato</h1>
           <input placeholder="Nome" id="name" name="name"></input>
           <input placeholder="Email" id="email" name="email"></input>
