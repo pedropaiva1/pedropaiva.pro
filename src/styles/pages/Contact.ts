@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,7 +45,7 @@ export const Container = styled.main`
     padding: 10px 15px;
     border-radius: 6px;
     font-weight: 400;
-    border: 1px solid transparent;
+
     transition: all 0.2s linear;
   }
 
@@ -56,7 +56,7 @@ export const Container = styled.main`
   form > input,
   textarea {
     margin-top: 5px;
-    border: 1px solid #383a59;
+    border: 1px solid transparent;
     background-color: #282a36;
     color: #e1e1e6;
   }

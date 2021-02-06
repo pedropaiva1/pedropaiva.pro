@@ -32,15 +32,14 @@ export const Container = styled.div`
     color: #e1e1e6;
     width: 100%;
     height: 100%;
-    border: 1px solid;
-    border-color: #282a36;
+    border: solid 1px #8be9fd;
     border-radius: 7px;
     transition: all 0.2s linear;
     background-color: #282a36;
   }
 
   .box:hover {
-    border: solid 1px #50fa7b;
+    border-color: #50fa7b;
     -webkit-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);

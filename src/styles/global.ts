@@ -20,7 +20,7 @@ export default createGlobalStyle`
 
   body {
     color: ${props => props.theme.colors.text};
-    font: 700 16px Inter, sans-serif;
+    font: 700 16px 'Roboto', sans-serif;
   }
 
   body, input, button, textarea {
@@ -30,7 +30,6 @@ export default createGlobalStyle`
 
   button {
     cursor:pointer;
-    border: 0;
   }
 
   @keyframes loadAnimation {

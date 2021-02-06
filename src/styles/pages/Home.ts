@@ -9,7 +9,7 @@ export const Container = styled.div`
   text-align: center;
   animation: loadAnimation;
   animation-duration: 500ms;
-
+  margin-top: 20px;
   img {
     -webkit-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
