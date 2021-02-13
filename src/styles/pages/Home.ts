@@ -25,10 +25,10 @@ export const Container = styled.div`
 `
 
 export const Description = styled.p`
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   padding: 0 6px;
   margin-top: 95px;
   font-size: 20px;

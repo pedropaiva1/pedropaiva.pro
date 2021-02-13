@@ -32,7 +32,7 @@ export const Container = styled.div`
     color: #e1e1e6;
     width: 100%;
     height: 100%;
-    border: solid 1px #8be9fd;
+    border: 1px solid transparent;
     border-radius: 7px;
     transition: all 0.2s linear;
     background-color: #282a36;

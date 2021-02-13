@@ -13,6 +13,9 @@ export const Container = styled.div`
   margin-top: 30px;
 
   img {
+    -webkit-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 71px -15px rgba(0, 0, 0, 0.75);
     border-radius: 50%;
     border: dashed 2px #50fa7b;
   }

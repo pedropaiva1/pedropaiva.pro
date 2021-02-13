@@ -23,7 +23,6 @@ export const Technologies = styled.div`
 
 export const Curriculum = styled.div`
   display: flex;
-  width: 100%;
   justify-content: start;
   flex-direction: column;
   text-align: center;
