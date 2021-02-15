@@ -63,10 +63,10 @@ const Contact: NextPage = () => {
     })
     emailjs
       .sendForm(
-        'service_rfguz0s',
-        'template_t22alea',
+        `${process.env.SERVICE_ID}`,
+        `${process.env.TEMPLATE_ID}`,
         e.target,
-        'user_wXfvqOZyvyneNGDHf4gqU'
+        `${process.env.USER_ID}`
       )
       .then(
         result => {
