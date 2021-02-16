@@ -7,15 +7,15 @@ export const Background = styled.div`
   -webkit-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 15px -16px 98px 3px rgba(0, 0, 0, 0.75);
+  z-index: 100;
 
   .nav-menu {
     background-color: #282a36;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 40px;
     right: -100%;
     transition: all 0.4s ease;
     z-index: 10;
@@ -23,7 +23,7 @@ export const Background = styled.div`
 
   .nav-menu.active {
     right: 0;
-    z-index: 1000;
+    z-index: 10;
   }
 
   .nav-text {
@@ -55,7 +55,6 @@ export const Background = styled.div`
   .navbar-toggle {
     background-color: #282a36;
     width: 100%;
-    height: 40px;
     display: flex;
     justify-content: end;
     align-items: center;
