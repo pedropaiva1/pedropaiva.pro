@@ -98,10 +98,15 @@ export const Container = styled.div`
   }
 
   p {
+    font-family: 'Lobster', cursive;
+    font-weight: 500;
     font-size: 30px;
     transition: all 0.2s linear;
-    border-bottom: 2px solid transparent;
-    margin-bottom: 2px;
+    color: #8be9fd;
+  }
+
+  p > b {
+    color: #8be9fd;
   }
 
   p:hover {
@@ -121,6 +126,11 @@ export const Container = styled.div`
     cursor: pointer;
     color: #8be9fd;
     border-color: #8be9fd;
+  }
+
+  #path {
+    color: #8be9fd;
+    border-bottom: 2px solid #8be9fd;
   }
 
   > svg {

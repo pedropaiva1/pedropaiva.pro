@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { HiMenu } from 'react-icons/hi'
 import { VscClose } from 'react-icons/vsc'
@@ -11,13 +12,15 @@ import { Background, Container } from './styles'
 const NavBar: React.FC = () => {
   const [sidebar, setSidebar] = useState<boolean>(false)
 
+  const router = useRouter()
+
   const showSidebar = () => setSidebar(!sidebar)
 
   return (
     <Background>
       <Container>
         <Link href="/">
-          <p onClick={sidebar && showSidebar}>Pedro Paiva</p>
+          <p>Pedro Paiva</p>
         </Link>
         {sidebar && (
           <VscClose size={28} color="#e1e1e6" onClick={showSidebar} />
@@ -25,10 +28,20 @@ const NavBar: React.FC = () => {
         {!sidebar && <HiMenu size={28} color="#e1e1e6" onClick={showSidebar} />}
         <ul>
           <Link href="/portfolio">
-            <li>Portfolio</li>
+            <li
+              onClick={() => router.push('/portfolio')}
+              id={router.pathname === '/portfolio' ? 'path' : ''}
+            >
+              portfolio
+            </li>
           </Link>
           <Link href="/contact">
-            <li>Contato</li>
+            <li
+              onClick={() => router.push('/contact')}
+              id={router.pathname === '/contact' ? 'path' : ''}
+            >
+              contato
+            </li>
           </Link>
         </ul>
       </Container>
