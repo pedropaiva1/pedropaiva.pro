@@ -18,12 +18,11 @@ const Portfolio: NextPage = () => {
       <Curriculum>
         <h1>Experiência</h1>
         <p>
-          <b>Curso:</b> Cursanso Técnico Integrado em Informática na UTFPR -
+          <b>Curso:</b> Cursando Técnico Integrado em Informática na UTFPR -
           formação em 2022.
         </p>
         <p>
-          <b>Estágio:</b> Desenvolvimento Fullstack na plataforma Trucker do
-          Agro.
+          <b>Estágio:</b> Desenvolvedor Fullstack na plataforma Trucker do Agro.
         </p>
         <h1>Projetos no GitHub</h1>
       </Curriculum>
