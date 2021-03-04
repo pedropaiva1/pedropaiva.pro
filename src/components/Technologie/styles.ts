@@ -40,6 +40,7 @@ export const Container = styled.div`
 
   .box:hover {
     border-color: #50fa7b;
+    cursor: pointer;
     -webkit-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);

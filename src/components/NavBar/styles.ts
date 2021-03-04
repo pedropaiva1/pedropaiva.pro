@@ -117,7 +117,7 @@ export const Container = styled.div`
   li {
     font-size: 25px;
     margin-left: 25px;
-    transition: all 0.2s linear;
+    transition: ease-in-out 0.3s;
     border-bottom: 2px solid transparent;
   }
 
@@ -125,9 +125,10 @@ export const Container = styled.div`
     cursor: pointer;
     color: #8be9fd;
     border-color: #8be9fd;
+    border-bottom: 2px solid #8be9fd;
   }
 
-  #path {
+  path {
     color: #8be9fd;
     border-bottom: 2px solid #8be9fd;
   }

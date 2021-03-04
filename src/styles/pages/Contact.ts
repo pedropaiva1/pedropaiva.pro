@@ -106,6 +106,9 @@ export const Container = styled.div`
 
   button:hover {
     border: 1px solid #50fa7b;
+    -webkit-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 117px -23px rgba(0, 0, 0, 0.75);
   }
 
   @media (max-width: 750px) {
