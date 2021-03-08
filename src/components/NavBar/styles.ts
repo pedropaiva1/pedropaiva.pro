@@ -128,7 +128,7 @@ export const Container = styled.div`
     border-bottom: 2px solid #8be9fd;
   }
 
-  path {
+  #path {
     color: #8be9fd;
     border-bottom: 2px solid #8be9fd;
   }
