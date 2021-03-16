@@ -5,7 +5,6 @@ import { Container, Curriculum, Technologies } from '../styles/pages/Portfolio'
 import Technologie from '../components/Technologie'
 
 import { useFetch } from '../hooks/useFetch'
-
 const Portfolio: NextPage = () => {
   const { data, error } = useFetch(
     'https://api.github.com/users/pedroviskov1234/repos'

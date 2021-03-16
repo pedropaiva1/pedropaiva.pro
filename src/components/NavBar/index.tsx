@@ -7,6 +7,8 @@ import { VscClose } from 'react-icons/vsc'
 
 import { SidebarData } from './SidebarData'
 
+import { AnimatePresence, motion } from 'framer-motion'
+
 import { Background, Container } from './styles'
 
 const NavBar: React.FC = () => {
@@ -45,19 +47,28 @@ const NavBar: React.FC = () => {
           </Link>
         </ul>
       </Container>
-      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className="nav-menu-items">
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName} onClick={showSidebar}>
-                <Link href={item.path}>
-                  <p>{item.title}</p>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
+      <AnimatePresence>
+        {sidebar && (
+          <motion.nav
+            className="nav-menu"
+            animate={{ width: 250 }}
+            initial={{ width: 0 }}
+            exit={{ width: 0 }}
+          >
+            <ul className="nav-menu-items">
+              {SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName} onClick={showSidebar}>
+                    <Link href={item.path}>
+                      <p>{item.title}</p>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </Background>
   )
 }

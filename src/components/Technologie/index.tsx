@@ -16,7 +16,6 @@ const Technologie: React.FC<TechnolieProps> = props => {
         className="box"
         whileHover={{
           position: 'relative',
-          zIndex: 1,
           scale: 1.05,
           backgroundColor: '#282a36',
           transition: {

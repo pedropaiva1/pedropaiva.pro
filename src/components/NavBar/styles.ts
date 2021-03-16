@@ -16,13 +16,7 @@ export const Background = styled.div`
     display: flex;
     justify-content: center;
     position: fixed;
-    right: -100%;
-    transition: all 0.4s ease;
-    z-index: 10;
-  }
-
-  .nav-menu.active {
-    right: 0;
+    right: 0%;
     z-index: 10;
   }
 

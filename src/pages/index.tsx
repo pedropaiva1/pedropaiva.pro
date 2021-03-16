@@ -8,12 +8,15 @@ import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 
 import { Container, SocialNetworks, Description } from '../styles/pages/Home'
 
+import { motion } from 'framer-motion'
+
 const Home: NextPage = () => {
   return (
     <Container>
       <Head>
         <title>Home | Pedro Paiva</title>
       </Head>
+
       <Image
         src="/me.jpg"
         alt="Pedro Henrique Martins Paiva"
@@ -21,10 +24,16 @@ const Home: NextPage = () => {
         width={250}
         quality={100}
       />
-      <Description>
-        Desenvolvedor de aplicações web com foco em performance e experiência de
-        usuário.
-      </Description>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.25, duration: 0.5 }}
+      >
+        <Description>
+          Desenvolvedor de aplicações web com foco em performance e experiência
+          de usuário.
+        </Description>
+      </motion.div>
       <SocialNetworks>
         <a
           target="__blank"
@@ -41,6 +50,17 @@ const Home: NextPage = () => {
       </SocialNetworks>
     </Container>
   )
+}
+
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc.
+  const data = {}
+
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: {}
+  }
 }
 
 export default Home
