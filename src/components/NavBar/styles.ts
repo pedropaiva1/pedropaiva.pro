@@ -17,7 +17,7 @@ export const Background = styled.div`
     justify-content: center;
     position: fixed;
     right: 0%;
-    z-index: 10;
+    z-index: 1;
   }
 
   .nav-text {
@@ -40,18 +40,6 @@ export const Background = styled.div`
     display: flex;
     align-items: center;
     padding: 0 16px;
-  }
-
-  .nav-menu-items {
-    width: 100%;
-  }
-
-  .navbar-toggle {
-    background-color: #282a36;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
   }
 
   a > p {

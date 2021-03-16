@@ -53,9 +53,10 @@ const NavBar: React.FC = () => {
             className="nav-menu"
             animate={{ width: 250 }}
             initial={{ width: 0 }}
+            transition={{ ease: 'easeOut', duration: 2 }}
             exit={{ width: 0 }}
           >
-            <ul className="nav-menu-items">
+            <ul>
               {SidebarData.map((item, index) => {
                 return (
                   <li key={index} className={item.cName} onClick={showSidebar}>
