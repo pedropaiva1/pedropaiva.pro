@@ -31,6 +31,17 @@ export const Background = styled.div`
     cursor: pointer;
   }
 
+  .nav-menu-items {
+    width: 100%;
+  }
+  .navbar-toggle {
+    background-color: #282a36;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
   .nav-text p {
     text-decoration: none;
     color: #e1e1e6;

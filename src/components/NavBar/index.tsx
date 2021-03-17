@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
     <Background>
       <Container>
         <Link href="/">
-          <p>Pedro Paiva</p>
+          <p onClick={sidebar && showSidebar}>Pedro Paiva</p>
         </Link>
         {sidebar && (
           <VscClose size={28} color="#e1e1e6" onClick={showSidebar} />
@@ -53,10 +53,9 @@ const NavBar: React.FC = () => {
             className="nav-menu"
             animate={{ width: 250 }}
             initial={{ width: 0 }}
-            transition={{ ease: 'easeOut', duration: 2 }}
             exit={{ width: 0 }}
           >
-            <ul>
+            <ul className="nav-menu-items">
               {SidebarData.map((item, index) => {
                 return (
                   <li key={index} className={item.cName} onClick={showSidebar}>
