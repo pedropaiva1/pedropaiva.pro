@@ -28,7 +28,6 @@ export const Background = styled.div`
     list-style: none;
     height: 60px;
     border-bottom: 1px solid #50fa7b;
-    cursor: pointer;
   }
 
   .nav-menu-items {
@@ -43,6 +42,9 @@ export const Background = styled.div`
   }
 
   .nav-text p {
+    transition: ease 0.2s;
+    border-radius: 8px;
+    background-color: #424556;
     text-decoration: none;
     color: #e1e1e6;
     font-size: 18px;
@@ -51,6 +53,11 @@ export const Background = styled.div`
     display: flex;
     align-items: center;
     padding: 0 16px;
+    cursor: pointer;
+  }
+
+  .nav-text p:hover {
+    background-color: #54586a;
   }
 
   a > p {
