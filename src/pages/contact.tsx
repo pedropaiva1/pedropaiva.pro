@@ -148,24 +148,9 @@ const Contact: NextPage = () => {
         </section>
         <form onSubmit={sendEmail}>
           <h1>Entre em contato</h1>
-          <input
-            placeholder="Nome"
-            id="name"
-            name="name"
-            autoComplete="off"
-          ></input>
-          <input
-            placeholder="Email"
-            id="email"
-            name="email"
-            autoComplete="off"
-          ></input>
-          <input
-            placeholder="Assunto"
-            id="subject"
-            name="subject"
-            autoComplete="off"
-          ></input>
+          <input placeholder="Nome" id="name" name="name"></input>
+          <input placeholder="Email" id="email" name="email"></input>
+          <input placeholder="Assunto" id="subject" name="subject"></input>
           <textarea
             placeholder="Descrição"
             id="description"
