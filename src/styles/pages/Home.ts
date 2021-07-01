@@ -48,10 +48,15 @@ export const SocialNetworks = styled.div`
   margin-top: 30px;
 
   a {
+    transition: ease 0.2s;
     text-decoration: none;
     color: #e1e1e6;
     align-items: center;
     margin: 0 50px;
+  }
+
+  a :hover{
+    color: #b1b1b5;
   }
 
   @media (max-width: 800px) {

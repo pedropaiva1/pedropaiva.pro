@@ -4,14 +4,33 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
-import { ToastContainer, toast } from 'react-toastify'
+import toast, { Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com'
 import 'react-toastify/dist/ReactToastify.css'
 
 import { Container, SocialNetworks } from '../styles/pages/Contact'
 
 const Contact: NextPage = () => {
-  function sendEmail(e) {
+
+  async function sendEmail(e){
+    await toast.promise(
+      emailjs
+      .sendForm(
+        `${process.env.SERVICE_ID}`,
+        `${process.env.TEMPLATE_ID}`,
+        e.target,
+        `${process.env.USER_ID}`
+      ),
+      {
+        loading: 'Enviando email...',
+        success: <b>E-mail enviado com sucesso!</b>,
+        error: <b>Erro ao enviar o e-mail</b>
+      }
+    )
+    
+  }
+
+  function handleSendEmail(e) {
     e.preventDefault()
 
     const inputs = document.getElementsByTagName('input')
@@ -30,80 +49,12 @@ const Contact: NextPage = () => {
       formData.subject === '' ||
       formData.description === ''
     ) {
-      toast.dark('📝 Favor preencher todos os campos', {
-        position: 'top-right',
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        bodyStyle: {
-          fontFamily: 'Roboto',
-          fontSize: 18,
-          color: '#e1e1e6'
-        }
-      })
+      toast('📋 Preencha todos os campos!')
       return
     }
 
-    toast.dark('📤 Enviando e-mail...', {
-      position: 'top-right',
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      bodyStyle: {
-        fontFamily: 'Roboto',
-        fontSize: 20,
-        color: '#e1e1e6'
-      }
-    })
-    emailjs
-      .sendForm(
-        `${process.env.SERVICE_ID}`,
-        `${process.env.TEMPLATE_ID}`,
-        e.target,
-        `${process.env.USER_ID}`
-      )
-      .then(
-        result => {
-          console.log(result.text)
-          toast.dark('🚀 E-mail enviado com sucesso!', {
-            position: 'top-right',
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            bodyStyle: {
-              fontFamily: 'Roboto',
-              fontSize: 20,
-              color: '#e1e1e6'
-            }
-          })
-        },
-        error => {
-          console.log(error.text)
-          toast.dark('😓 Erro ao enviar o e-mail', {
-            position: 'top-right',
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            bodyStyle: {
-              fontFamily: 'Roboto',
-              fontSize: 20,
-              color: '#e1e1e6'
-            }
-          })
-        }
-      )
+    sendEmail(e)
+    
     e.target.reset()
   }
 
@@ -132,8 +83,8 @@ const Contact: NextPage = () => {
             <a>
               <HiMail size={30} /> <p>pedro.paivahmp@gmail.com</p>
             </a>
-            <a href="https://github.com/pedroviskov1234" target="__blank">
-              <FaGithub size={30} /> <p>pedroviskov1234</p>
+            <a href="https://github.com/pedropaiva1" target="__blank">
+              <FaGithub size={30} /> <p>pedropaiva1</p>
             </a>
             <a
               href="https://www.linkedin.com/in/pedro-paiva-b36267205/"
@@ -146,7 +97,7 @@ const Contact: NextPage = () => {
             </a>
           </SocialNetworks>
         </section>
-        <form onSubmit={sendEmail}>
+        <form onSubmit={handleSendEmail}>
           <h1>Entre em contato</h1>
           <input placeholder="Nome" id="name" name="name"></input>
           <input placeholder="Email" id="email" name="email"></input>
@@ -159,16 +110,15 @@ const Contact: NextPage = () => {
           <button type="submit">Enviar</button>
         </form>
       </Container>
-      <ToastContainer
-        position="top-center"
-        autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
+      <Toaster
+        toastOptions={{
+          className: '',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        }}
       />
     </>
   )

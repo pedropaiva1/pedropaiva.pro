@@ -36,6 +36,7 @@ export const Curriculum = styled.div`
   }
 
   p {
+    font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
   }
