@@ -37,14 +37,14 @@ const Home: NextPage = () => {
       <SocialNetworks>
         <a
           target="__blank"
-          href="https://www.linkedin.com/in/pedro-martins-b36267205/"
+          href="https://www.linkedin.com/in/pedro-paiva-015"
         >
           <FaLinkedin size={40} />
         </a>
         <a target="__blank" href="https://www.facebook.com/pedroxotaf/">
           <FaFacebook size={40} />
         </a>
-        <a target="__blank" href="https://github.com/pedroviskov1234">
+        <a target="__blank" href="https://github.com/pedropaiva1">
           <FaGithub size={40} />
         </a>
       </SocialNetworks>
